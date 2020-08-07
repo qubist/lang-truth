@@ -1,0 +1,353 @@
+body {
+	background-color: #eeeef0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin-top: 4px;
+	}
+
+.hidden {
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	position: absolute;
+	left: 184px;
+}
+	/*.hidden {display:none;} */
+
+.indent {padding-left: 10px;}
+#jump {font-size: 9px;}
+p { font-size: 13px;}
+ul, li { font-size: 13px; margin: 0px 2px 2px 10px;  padding: 0px;}
+td, th {font-size: 13px; vertical-align: top; }
+hr { color: #000; }
+H2{	font-size: 24px; margin-top: 15px; text-align: center; }
+H3{ font-size: 18px;}
+H4{ font-size: 14px; }
+H5{ font-size: 12px;}
+H6{ font-size: 10px; margin: 0px;}
+b{font-weight : bold;}
+i{font-style : italic;}
+a:link, a:visited { font-weight: normal; color: #00F; text-decoration: none; }
+a:hover, a:active  { color: #603; text-decoration: underline; }
+
+/*********     Layout styles   ****************/
+#content {
+		clear:both;
+		margin: 0px auto; /*Used to center layout in browser window*/
+		width: 760px;
+		width/* */:/**/760px;
+		width: /**/760px;
+		padding: 0px;
+		vertical-align:top;
+		/*background-color: #FF9900;*/
+		/*border: 1px solid red;*/ }
+#main_content {float: right;
+	overflow: visible;
+	width: 590px;
+	width/* */:/**/590px;
+	width: /**/578px;
+	/*text-align: left;  In order for the alignment to work correctly in Contribute this must not be used. */
+	margin: 0px;
+	padding: 6px;
+	background-color: #fff;
+	/*border:1px solid black;*/}
+#header {vertical-align: top;
+	width: 760px;
+	width/* */:/**/760px;
+	width: /**/760px;
+	margin: 0px auto; /*Used to center layout in browser window*/
+	padding: 0px;
+	clear: both;
+	/*border: 1px solid red;*/
+}
+#headerleft{float:left;
+	width: 520px;
+	width/* */:/**/520px;
+	width: /**/520px;
+	height:20px;
+	vertical-align:top;
+	text-align:left;
+	/*border: 1px solid red;*/
+}
+#headerright {width: 228px;
+	width/* */:/**/228px;
+	width: /**/228px;
+	margin: 0px;
+	padding:0px;
+	float: left;
+	vertical-align:top;
+	text-align:right;
+}
+#headerright ul {list-style: none; padding: 0px; margin:0px}
+#headerright li {display:inline; padding: 0px; margin: 0px;}
+#headerright li a {padding: 0px 15px 0px 0px; font-weight:bold; font-size: 12px; color:#000;}
+#headerright li a:link, headerright a:visited{text-decoration: none;}
+#headermiddle img{vertical-align:top; padding:0px;}
+/*Beginning of footer style*/
+#footer {clear: both; width: 760px;  margin: 3px auto; font-size:11px; text-align:center;}
+#footer a:link, #footer a:visited {color: #00f; text-decoration: none;}
+#footer a:hover, #footer a:active{text-decoration: underline;}
+#footer ul { list-style: none; margin: 0px; padding: 0px;}
+#footer li { display: inline; padding: 0px; border-right: 1px solid #000000; font-size:11px; margin:0px;}
+#footer li a { padding: 0px 10px;}
+#addr {width: 345px; text-align: left; float: left; margin-top: 5px; margin-left: 50px; padding-top: 5px;}
+#addr img {float: left;	margin-top: 2px; margin-right: 15px; /*padding-right: 20px;*/}
+#contact{float: right; text-align: left; width: 300px; margin-top: 10px;}
+
+/*Beginning of new Banner style*/
+#banner {height:35px;
+	background:#000;
+	width: 760px;
+	width/* */:/**/760px;
+	width: /**/760px;
+	margin: 0px auto; /*Used to center layout in browser window*/
+	vertical-align: middle;
+	/*border: 1px solid red;*/
+	}
+#subbanner {float:left;
+			font-size: 12px;
+			color: #FFF;
+			padding: 9px 0px 0px 10px;
+			margin: 0px;
+			width: 515px;
+			width/* */:/**/515px;
+			width:/**/505px;
+			/*border:1px solid yellow;*/
+}
+#subbanner ul { list-style: none; margin: 0px; padding: 0px;}
+#subbanner li { display: inline; padding: 0px; margin: 0px;}
+#subbanner li a {padding-right: 10px;}
+#subbanner a:link, #subbanner a:visited {color: #FFF; text-decoration: none;}
+#subbanner a:hover, #subbanner a:active {text-decoration: underline;}
+
+.searchbutton {
+	font-size: 10px;
+	background-color: #999;
+	color: #fff;
+	border: 2px outset #fff;
+	margin: 4px 0px 0px 5px;
+	padding: 1px;
+}
+#search {
+	float:right;
+	background-color: #000;
+	font-size: 12px;
+	color:#fff;
+	width:245px;
+	width/* */:/**/245px;
+	width:/**/244px;
+	margin: 2px 0px 0px 0px;
+	vertical-align: middle;
+	padding: 3px 0px 3px 0px;
+	border-left: 1px solid #fff;
+	/*vertical-align: middle;*/
+}
+#search fieldset {margin: 0px; padding:0px; border: none;}
+#search legend, #search form {margin: 0px; padding: 0px;}
+#search input{vertical-align:middle;}
+
+.menu a:link, .menu a:visited {
+	font-size: 12px;
+	font-style: normal;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu a:hover, .menu a:active {text-decoration: underline;}
+.deqbanner {
+	width: 760px;
+	width/* */:/**/760px;
+	width: /**/720px;
+	padding: 3px 20px 10px 20px;
+	font-size: 12px;
+	font-style: normal;
+	color: #FFF;
+	font-weight: normal;
+	background-color:#006633;
+	text-align:center;
+	margin: 0px auto;}
+
+.deqbanner ul { list-style: none; margin: 0px; padding: 0px;}
+.deqbanner li { display: inline; padding: 0px; margin: 0px;}
+.deqbanner li a {padding-right: 30px; font-size: 12px;}
+.deqbanner a:link, .deqbanner a:visited { color: #fff; text-decoration: none; }
+.deqbanner a:hover, .deqbanner a:active { color: #fff; text-decoration: underline;}
+
+.program a:link, .program a:visited {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 14px;
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;}
+
+.program a:hover, .program a:active {color: #ccc;}
+.pdf-red { font-size: 11px; color: #f00; }
+
+.H3Blue { font-size: 18px; font-weight: bold; color: #036; }
+.H3Gray { font-size: 18px; font-weight: bold; color: #666; }
+.H3Green { font-size: 18px; font-weight: bold; color: #063; }
+.H3burgundy { font-size: 18px; font-weight: bold; color: #603; }
+
+.H4Blue { font-size: 14px; font-weight: bold; color: #036; }
+.H4Gray { font-size: 14px; font-weight: bold; color: #666; }
+.H4Green { font-size: 14px; font-weight: bold; color: #063; }
+.H4burgundy { font-size: 14px; font-weight: bold; color: #603; }
+
+.small { font-size: 11px; font-weight: normal; font-style: normal; }
+.small a:link, .small a:visited {font-size: 11px; text-decoration: none; }
+.small a:hover, .small a:active {font-size: 11px; text-decoration: underline; }
+.small li { font-size: 11px; font-weight: normal; font-style: normal; }
+
+.smallblue { font-size: 11px; font-weight: normal; color: #036; }
+.smallgreen { font-size: 11px; font-weight: normal; color: #063; }
+.smallburgundy { font-size: 11px; font-weight: normal; color: #603; }
+.smallwhite { font-size: 11px; font-weight: normal; color: #fff; }
+.whitetext { font-size: 13px; font-weight: normal; color: #ffffff; }
+
+.h3linkblue a:link, .h3linkblue a:visited {font-size: 18px; font-style: normal; color: #036; text-decoration: none; font-weight: bold;}
+.h3linkgreen a:link, .h3linkgreen a:visited {font-size: 18px; font-style: normal; color: #063; text-decoration: none; font-weight: bold;}
+.h3linkburgundy a:link, .h3linkburgundy a:visited{font-size: 18px; font-style: normal; color: #603; text-decoration: none; font-weight: bold;}
+.h3linkblue a:hover, .h3linkblue a:active, .h3linkgreen a:hover, .h3linkgreen a:active, .h3linkburgundy a:hover, .h3linkburgundy a:active {text-decoration: underline;}
+
+.h4linkblue a:link, .h4linkblue a:visited {font-size: 14px; font-style: normal; color: #036; font-weight: bold;	text-decoration: none;}
+.h4linkgreen a:link, .h4linkgreen a:visited {font-size: 14px; font-style: normal; color: #063; font-weight: bold; text-decoration: none;}
+.h4linkburgundy a:link, .h4linkburgundy a:visited {font-size: 14px; font-style: normal; color: #603; font-weight: bold; text-decoration: none;}
+.h4linkburgundy a:hover, .h4linkburgundy a:active, .h4linkgreen a:hover, .h4linkgreen a:active, .h4linkblue a:hover, .h4linkblue a:active {text-decoration: underline;}
+
+.photoleft {float: left; margin: 0px 15px 10px 0px; }
+.photoright {float: right; margin: 0px 0px 10px 15px; }
+
+/*Table styles*/
+table.tableblue {border-color:#cccccc; border-collapse:collapse; border: ridge thin; background-image:url(/web/20070207094008im_/http://www.dnr.mo.gov/shared/bg-speckleblue.jpg)}
+table.tableblue th {border: ridge thin;	padding: 3px; border-color: #cccccc;}
+table.tableblue td {border: ridge thin; padding: 3px; border-color:#cccccc;}
+
+table.tablegreen {border-color:#cccccc; border-collapse:collapse; border: ridge thin; background-image:url(/web/20070207094008im_/http://www.dnr.mo.gov/shared/bg-specklegreen.jpg)}
+table.tablegreen th {border: ridge thin; padding: 3px; border-color: #cccccc;}
+table.tablegreen td {border: ridge thin; padding: 3px; border-color:#cccccc;}
+
+table.tabletan {border-color:#cccccc; border-collapse:collapse;border: ridge thin; background-image:url(/web/20070207094008im_/http://www.dnr.mo.gov/shared/bg-speckletan.jpg)}
+table.tabletan th {border: ridge thin; padding: 3px; border-color: #cccccc;}
+table.tabletan td {border: ridge thin; padding: 3px; border-color:#cccccc;}
+
+table.tablebgblue {background-color:#bddeff; border-color:#cccccc; border-collapse:collapse; border: ridge thin;}
+table.tablebgblue th { border: ridge thin; padding: 3px; border-color: #cccccc;}
+table.tablebgblue td { border: ridge thin; padding: 3px; border-color:#cccccc;}
+
+table.tablebggray {border-color:#cccccc; border-collapse:collapse; border: ridge thin; background-color:#cccccc;}
+table.tablebggray th {border: ridge thin;	padding: 3px; border-color: #cccccc;}
+table.tablebggray td {border: ridge thin; padding: 3px; border-color:#cccccc;}
+
+table.tablebgtan {background-color:#e7e7d0; border-color:#e7e7d0; border-collapse:collapse; border: ridge thin;}
+table.tablebgtan th {border: ridge thin; padding: 3px; border-color:#e7e7d0;}
+table.tablebgtan td {border: ridge thin; padding: 3px; border-color:#e7e7d0;}
+
+table.sortable a.sortheader {font-weight:bold; display:block; text-align:center; text-decoration:none;}
+table.sortable span.sortarrow{color:black; text-decoration:none;}
+table.sortable caption {text-align:left;}
+
+.navleft {
+	color: #fff;
+	font-size: 12px;
+  	font-style: normal;
+	font-weight: bold;
+  	width: 156px;
+	width/* */:/**/156px;
+	width: /**/150px;
+	padding: 3px;
+	margin: 0px;
+	text-align: left;
+}
+.navleft ul { list-style: none; margin: 0px 0px 10px 0px; padding: 0px;}
+.navleft li { display: inline; padding: 0px; margin: 0px;}
+.navleft li a {padding-right: 10px; font-size: 12px;}
+.navleft a:link, .navleft a:visited { color: #fff; text-decoration: none; }
+.navleft a:hover, .navleft a:active { color: #000; }
+.navleft li image {margin: 0px auto;}
+
+#navcolor_dnr { background-color: #0052A3; width: 162px; margin: 0px; padding: 15px 0px; float:left;}
+#navcolor_deq { background-color: #063; width: 162px; margin: 0px; padding: 15px 0px; float:left; }
+#navcolor_das { background-color: #666; width: 162px; margin: 0px; padding: 15px 0px; float:left;}
+#navcolor_dgls { background-color: #686836; width: 162px; margin: 0px; padding: 15px 0px; float:left;}
+
+.navleft_dnr , .navleft_dnr a:link, .navleft_dnr a:visited {
+	background-color: #0052A3;
+	color: #666;
+	border-bottom: 1px solid #ccc;
+	margin: 0px;
+	height: auto;
+	padding: 4px;
+	clear: left;
+	float: left;
+	width: 145px;
+	text-align: left;
+	text-decoration: none;
+	display: block;}
+.navleft_dnr:hover, .navleft_dnr:active { background-color: #ccc;  }
+
+.navleft_deq , .navleft_deq a:link, .navleft_deq a:visited {
+  	background-color: #063;
+  	color: #666;
+	border-bottom: 1px solid #ccc;
+	margin: 0px;
+	height: auto;
+	padding: 4px;
+	clear: left;
+	float: left;
+  	width: 145px;
+  	text-align: left;
+	text-decoration: none;
+}
+.navleft_deq:hover, .navleft_deq:active { background-color: #ccc;  }
+
+.navleft_das , .navleft_das a:link, .navleft_das a:visited {
+  	background-color: #666;
+  	color: #000;
+	border-bottom: 1px solid #ccc;
+	margin: 0px;
+	height: auto;
+	padding: 4px;
+	clear: left;
+	float: left;
+  	width: 145px;
+  	text-align: left;
+	text-decoration: none;
+}
+.navleft_das:hover, .navleft_das:active { background-color: #ccc;  }
+
+.navleft_dgls , .navleft_dgls a:link, .navleft_dgls a:visited {
+  	background-color: #686836;
+  	color: #666;
+	border-bottom: 1px solid #ccc;
+	margin: 0px;
+	height: auto;
+	padding: 4px;
+	clear: left;
+	float: left;
+  	width: 145px;
+  	text-align: left;
+	text-decoration: none;
+}
+.navleft_dgls:hover, .navleft_dgls:active { background-color: #ccc;  }
+/*
+     FILE ARCHIVED ON 09:40:08 Feb 07, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:34:37 Aug 06, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots.policy: 0.175
+  LoadShardBlock: 4769.902 (3)
+  load_resource: 195.878
+  RedisCDXSource: 9.445
+  PetaboxLoader3.resolve: 147.702 (2)
+  captures_list: 4812.093
+  PetaboxLoader3.datanode: 4786.408 (4)
+  esindex: 0.014
+  exclusion.robots: 0.189
+  CDXLines.iter: 22.67 (3)
+*/
