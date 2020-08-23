@@ -50,6 +50,13 @@
       // alert("Successfully processed " + data.length + " rows!")
       console.log(data);
 
+      // sort data alphabetically so that the result is alhpabetical
+      data.sort(function(a, b) {
+        var textA = a['Word'].toUpperCase() // uppercase makes sort case insensitive
+        var textB = b['Word'].toUpperCase()
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0
+      })
+
       for (const line of data) {
         const word = line['Word']
         const expansion = line['Expansion']
