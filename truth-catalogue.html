@@ -50,6 +50,17 @@
       // alert("Successfully processed " + data.length + " rows!")
       console.log(data);
 
+      // sort data alphabetically so that the result is alhpabetical
+      // https://stackoverflow.com/questions/8900732
+      data.sort(function(a, b) {
+        var textA = a['Word'].toUpperCase() // uppercase makes sort case insensitive
+        var textB = b['Word'].toUpperCase()
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0
+      })
+
+      // hide loading text
+      document.getElementById('loading-text').style.display = 'none'
+
       for (const line of data) {
         const word = line['Word']
         const expansion = line['Expansion']
@@ -65,7 +76,8 @@
           newListItem.title = `Contributed by: ${attribution}`
         }
         // newListItem.appendChild(document.createTextNode(`${word} ${expansion}`))
-        list.appendChild(newListItem)
+        list.appendChild(newListItem) // add truth to its list
+        document.getElementById(firstLetter).parentElement.parentElement.style.display = 'block' // show that list
 
       }
 
@@ -113,88 +125,89 @@
     <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a>
     <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a>
     <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a></h3>
+  <h4 id="loading-text"> LOADING... </h4>
   <table width="100%" align="center" cellpadding="2" cellspacing="0">
     <tr>
       <td valign="top" width="330" align="left">
-        <p><strong><a name="a" id="a"></a>A</strong></p>
+        <p style="display: none"><strong><a name="a" id="a"></a>A</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="b" id="b"></a>B</strong></p>
+        <p style="display: none"><strong><a name="b" id="b"></a>B</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="c" id="c"></a>C</strong></p>
+        <p style="display: none"><strong><a name="c" id="c"></a>C</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="d" id="d"></a>D</strong></p>
+        <p style="display: none"><strong><a name="d" id="d"></a>D</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="e" id="e"></a>E</strong></p>
+        <p style="display: none"><strong><a name="e" id="e"></a>E</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="f" id="f"></a>F</strong></p>
+        <p style="display: none"><strong><a name="f" id="f"></a>F</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="g" id="g"></a>G</strong></p>
+        <p style="display: none"><strong><a name="g" id="g"></a>G</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="h" id="h"></a>H</strong></p>
+        <p style="display: none"><strong><a name="h" id="h"></a>H</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="i" id="i"></a>I</strong></p>
+        <p style="display: none"><strong><a name="i" id="i"></a>I</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="j" id="j"></a>J</strong></p>
+        <p style="display: none"><strong><a name="j" id="j"></a>J</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="k" id="k"></a>K</strong></p>
+        <p style="display: none"><strong><a name="k" id="k"></a>K</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="l" id="l"></a>L</strong></p>
+        <p style="display: none"><strong><a name="l" id="l"></a>L</strong></p>
         <ul>
         </ul>
 
       </td>
       <td valign="top" width="316" align="left">
-        <p><strong><a name="m" id="m"></a>M</strong></p>
+        <p style="display: none"><strong><a name="m" id="m"></a>M</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="n" id="n"></a>N</strong></p>
+        <p style="display: none"><strong><a name="n" id="n"></a>N</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="o" id="o"></a>O</strong> </p>
+        <p style="display: none"><strong><a name="o" id="o"></a>O</strong> </p>
         <ul>
         </ul>
-        <p><strong><a name="p" id="p"></a>P</strong></p>
+        <p style="display: none"><strong><a name="p" id="p"></a>P</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="q" id="q"></a>Q</strong></p>
+        <p style="display: none"><strong><a name="q" id="q"></a>Q</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="r" id="r"></a>R</strong></p>
+        <p style="display: none"><strong><a name="r" id="r"></a>R</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="s" id="s"></a>S</strong></p>
+        <p style="display: none"><strong><a name="s" id="s"></a>S</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="t" id="t"></a>T</strong></p>
+        <p style="display: none"><strong><a name="t" id="t"></a>T</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="u" id="u"></a>U</strong></p>
+        <p style="display: none"><strong><a name="u" id="u"></a>U</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="v" id="v"></a>V</strong></p>
+        <p style="display: none"><strong><a name="v" id="v"></a>V</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="w" id="w"></a>W</strong></p>
+        <p style="display: none"><strong><a name="w" id="w"></a>W</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="x" id="x"></a>X</strong></p>
+        <p style="display: none"><strong><a name="x" id="x"></a>X</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="y" id="y"></a>Y</strong></p>
+        <p style="display: none"><strong><a name="y" id="y"></a>Y</strong></p>
         <ul>
         </ul>
-        <p><strong><a name="z" id="z"></a>Z</strong></p>
+        <p style="display: none"><strong><a name="z" id="z"></a>Z</strong></p>
         <ul>
         </ul>
       </td>
@@ -221,7 +234,7 @@
     	P.O. Box 866, Des Moines, IA 50309
 	</div>
 	<div id="contact">1-800-481-2224<br/>
-        E-mail: <a href="mailto:info@lang-truth.org">info@lang-truth.org</a> <br/>
+        E-mail: <a href="mailto:information@lang-truth.org">information@lang-truth.org</a> <br/>
 	  Revised on Monday August 10 2020
    </div>
 </div>
