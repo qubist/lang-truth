@@ -16,6 +16,18 @@ body {
 }
 	/*.hidden {display:none;} */
 
+figure {
+  display: table;
+	float: right;
+	padding: 7px;
+	margin: 10px;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
 .indent {padding-left: 10px;}
 #jump {font-size: 9px;}
 p { font-size: 13px;}
