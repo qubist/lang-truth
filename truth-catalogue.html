@@ -61,22 +61,25 @@
       // hide loading text
       document.getElementById('loading-text').style.display = 'none'
 
+      // add each entry to the Catalogue
       for (const line of data) {
         const word = line['Word']
         const expansion = line['Expansion']
         const attribution = line['Attribution']
-        const firstLetter = word[0].toLowerCase()
+        let firstLetter = word[0].toLowerCase()
+        if (!firstLetter.match(/[a-z]/i)) {
+          // put anything that's not a letter in the "-" category
+          firstLetter = '-'
+        }
         const list = document.getElementById(firstLetter).parentElement.parentElement.nextElementSibling
         const text = `${word} - <strong>${expansion}</strong>`
-
 
         var newListItem = document.createElement('li')
         newListItem.innerHTML = text
         if (attribution) {
           newListItem.title = `Contributed by: ${attribution}`
         }
-        // newListItem.appendChild(document.createTextNode(`${word} ${expansion}`))
-        list.appendChild(newListItem) // add truth to its list
+        list.appendChild(newListItem) // add truth to its letter's list
         document.getElementById(firstLetter).parentElement.parentElement.style.display = 'block' // show that list
 
       }
@@ -116,7 +119,7 @@
 
 <div id="content">
 
-  <h2>Dictionary</h2>
+  <h2>Truth Catalogue</h2>
   <p style="text-align: center">Hover over an entry to see its attribution. Items with no attribution were documented by internal committee.</p>
   <h3 align="center"><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a>
     <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a>
@@ -208,6 +211,9 @@
         <ul>
         </ul>
         <p style="display: none"><strong><a name="z" id="z"></a>Z</strong></p>
+        <ul>
+        </ul>
+        <p style="display: none"><strong><a name="-" id="-"></a>-</strong></p>
         <ul>
         </ul>
       </td>
