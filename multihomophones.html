@@ -19,7 +19,7 @@
 
     // Sheets API + PapaParse code from: https://github.com/jsoma/tabletop/issues/189
 
-    let SHEET_ID = '1cj1kl7RLTm5Ydme3ldjTl1yk2u1BV5ocxhqFr_j5py0' // Get this from the main sheet URL (not the copied Publish URL with '2PACX' in it).
+    let SHEET_ID = '1RuqtjAnuC7O61oFeSOyCl0UA4j1aKb0TVa0iwHZQZxc' // Get this from the main sheet URL (not the copied Publish URL with '2PACX' in it).
     let API_KEY = 'AIzaSyC6uZUBET974HbQPTgXySv7qXkBHVLvkiI'
 
     function fetchSheet({ spreadsheetId, sheetName, apiKey, complete }) {
@@ -50,35 +50,17 @@
       // alert("Successfully processed " + data.length + " rows!")
       console.log(data);
 
-      // sort data alphabetically so that the result is alhpabetical
-      // https://stackoverflow.com/questions/8900732
-      data.sort(function(a, b) {
-        var textA = a['Word'].toUpperCase() // uppercase makes sort case insensitive
-        var textB = b['Word'].toUpperCase()
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0
-      })
-
       // hide loading text
       document.getElementById('loading-text').style.display = 'none'
 
       // add each entry to the Catalogue
       for (const line of data) {
-        const word = line['Word']
-        const expansion = line['Expansion']
-        const attribution = line['Attribution']
-        let firstLetter = word[0].toLowerCase()
-        if (!firstLetter.match(/[a-z]/i)) {
-          // put anything that's not a letter in the "-" category
-          firstLetter = '-'
-        }
-        const list = document.getElementById(firstLetter).parentElement.parentElement.nextElementSibling
-        const text = `${word} - <strong>${expansion}</strong>`
+        const mh = line['Multihomophone']
+        const list = document.getElementById('list')
+        const text = `${mh}`
 
         var newListItem = document.createElement('li')
         newListItem.innerHTML = text
-        if (attribution) {
-          newListItem.title = `Contributed by: ${attribution}`
-        }
         list.appendChild(newListItem) // add truth to its letter's list
         document.getElementById(firstLetter).parentElement.parentElement.style.display = 'block' // show that list
 
@@ -119,54 +101,12 @@
 
 <div id="content">
 
-  <h2>Truth Catalogue</h2>
-  <p style="text-align: center">Hover over an entry to see its attribution. Items with no attribution were documented by internal committee.</p>
-  <h3 align="center"><a href="#a">A</a> <a href="#b">B</a> <a href="#c">C</a>
-    <a href="#d">D</a> <a href="#e">E</a> <a href="#f">F</a> <a href="#g">G</a>
-    <a href="#h">H</a> <a href="#i">I</a> <a href="#j">J</a> <a href="#k">K</a>
-    <a href="#l">L</a> <a href="#m">M</a> <a href="#n">N</a> <a href="#o">O</a>
-    <a href="#p">P</a> <a href="#q">Q</a> <a href="#r">R</a> <a href="#s">S</a>
-    <a href="#t">T</a> <a href="#u">U</a> <a href="#v">V</a> <a href="#w">W</a>
-    <a href="#x">X</a> <a href="#y">Y</a> <a href="#z">Z</a> <a href="multihomophones.html" class="secret">+</a></h3>
+  <h2>Multihomophones</h2>
   <h4 id="loading-text"> LOADING... </h4>
   <table width="100%" align="center" cellpadding="2" cellspacing="0">
     <tr>
       <td valign="top" width="330" align="left">
-        <p style="display: none"><strong><a name="a" id="a"></a>A</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="b" id="b"></a>B</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="c" id="c"></a>C</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="d" id="d"></a>D</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="e" id="e"></a>E</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="f" id="f"></a>F</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="g" id="g"></a>G</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="h" id="h"></a>H</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="i" id="i"></a>I</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="j" id="j"></a>J</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="k" id="k"></a>K</strong></p>
-        <ul>
-        </ul>
-        <p style="display: none"><strong><a name="l" id="l"></a>L</strong></p>
-        <ul>
+        <ul id="list">
         </ul>
 
       </td>
